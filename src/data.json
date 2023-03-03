@@ -1,0 +1,20 @@
+{
+    "image": {
+        "svgID": "peace0001",
+        "svgDescription": "woman with hearts underneath the word peace",
+        "svgShape": "round",
+		"colors": [
+            {
+                "id": "hair-color",
+                "label": "Hair Color",
+                "hexCode": "#000000"
+            },
+            {
+                "id": "skin-color",
+                "label": "Skin Color",
+                "hexCode": "#824836"
+            }
+
+        ]
+    }
+}
