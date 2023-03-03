@@ -1,14 +1,11 @@
 import './App.css';
-import Svg from './blocks/Svg'
+import Artboard from './blocks/Artboard';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Svg 
-          hairColor = "#000000"
-          skinColor = "#824836" 
-          />
+        <Artboard />
       </header>
     </div>
   );
