@@ -20,7 +20,7 @@ colors.forEach((item,index)=>{
 export default function Artboard(props) {
     return (
         <div>  
-            <Svg renderData={data.image.svgID} />
+            <Svg svgID={data.image.svgID} />
             {colorList}
         </div>
     )
