@@ -1,7 +1,7 @@
 import React from "react";
 import Svg from "./Svg";
 import {ReactComponent as Peace0001} from '../svgs/peace0001.svg';
-import {ReactComponent as Peace0002} from '../svgs/peace0002.svg';
+import {ReactComponent as Peace0001b} from '../svgs/peace0001b.svg';
 
 export default function SvgLibrary(props) {
     
@@ -9,8 +9,8 @@ export default function SvgLibrary(props) {
         case "peace0001": 
             return <Peace0001 />
             break;
-        case "peace0002": 
-            return <Peace0002 />
+        case "peace0001b": 
+            return <Peace0001b />
             break;
     }
 }
