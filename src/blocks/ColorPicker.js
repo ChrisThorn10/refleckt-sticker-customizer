@@ -1,21 +1,16 @@
-import React from "react"
+//import React, { useState } from 'react';
+import React from 'react';
 import "../styles/ColorPicker.scss";
 
-export default function ColorPicker(props) {
-    const handleChange = (e) => { 
-        e.preventDefault();
-        const newColor = e.target.value;
-        alert(newColor)
-    }
+
+const ColorPicker = (props) => {
 
     return (
-        <React.Fragment>
            <div>
-                <form>
-                    <input id={props.id} type="color" name={props.id} value={props.color} onChange={handleChange} />
-                    <label for={props.id}>{props.label}</label>
-                </form>
+                <input id={props.id} type="color" name={props.id} value={props.color} onChange={props.onChange.bind(this, props.id, props.elemIndex)} />
+                <label for={props.id}>{props.label}</label>
             </div>
-        </React.Fragment>
     )
 }
+
+export default ColorPicker;

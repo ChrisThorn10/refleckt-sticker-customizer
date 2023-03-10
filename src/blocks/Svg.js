@@ -3,13 +3,13 @@ import "../styles/Svg.scss";
 import SvgLibrary from "./SvgLibrary";
 
 export default function Svg(props) {
-    const hair = {
-        fill: props.hairColor
-      };
+    // const hair = {
+    //     fill: props.hairColor
+    //   };
 
-    const skin = {
-        fill: props.skinColor
-      };
+    // const skin = {
+    //     fill: props.skinColor
+    //   };
       
     return (
         <React.Fragment>
