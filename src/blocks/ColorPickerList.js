@@ -5,12 +5,11 @@ import ColorPicker from './ColorPicker';
 import data from "../data.json";
 
 
-const ColorPickers = (props) => {
+const ColorPickerList = (props) => {
 
-    const colors = data.image[0].colors;
     let colorList=[];
 
-    colors.forEach((item,index)=>{
+    props.colors.forEach((item,index)=>{
         colorList.push( 
             <ColorPicker 
                 id={item.id} 
@@ -22,7 +21,6 @@ const ColorPickers = (props) => {
         )
     })
  
-
     return (
         <div id="color-picker-list">
             {colorList}
@@ -30,4 +28,4 @@ const ColorPickers = (props) => {
     )
 }
 
-export default ColorPickers;
+export default ColorPickerList;
