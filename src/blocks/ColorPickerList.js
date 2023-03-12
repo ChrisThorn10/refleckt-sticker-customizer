@@ -17,6 +17,7 @@ const ColorPickerList = (props) => {
                 label={item.label}
                 onChange={props.onChange}
                 elemIndex={index}
+                key={index}
             />
         )
     })

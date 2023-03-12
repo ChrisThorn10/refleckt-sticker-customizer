@@ -22,9 +22,9 @@ const Artboard = (props) => {
     //update swatch color when a change event is detected
     const updateColor = (id, index) => { 
         const selectedColor = document.getElementById(id).value;
-        colorArray[index]=selectedColor;
-        //alert(`ID: ${id}, selectedColor: ${selectedColor}, index: ${index}, colorArray: ${colorArray}, value of newcolor: ${newColor}`)
-        setNewColor(colorArray);  
+        let newColorArray = colorArray;
+        newColorArray[index]=selectedColor;
+        setNewColor({newColorArray});  
     }
 
     return (
