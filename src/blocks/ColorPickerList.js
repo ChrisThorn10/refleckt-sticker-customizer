@@ -12,7 +12,7 @@ const ColorPickerList = (props) => {
     props.colors.forEach((item,index)=>{
         colorList.push( 
             <ColorPicker 
-                id={item.id} 
+                id={"input_"+item.id} 
                 color={props.newColor[index]} 
                 label={item.label}
                 onChange={props.onChange}

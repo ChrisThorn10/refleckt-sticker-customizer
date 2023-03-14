@@ -6,30 +6,12 @@
             "svgShape": "round",
             "colors": [
                 {
-                    "id": "hair-color",
+                    "id": "hair",
                     "label": "Hair Color",
                     "hexCode": "#000000"
                 },
                 {
-                    "id": "skin-color",
-                    "label": "Skin Color",
-                    "hexCode": "#824836"
-                }
-    
-            ]
-        },
-        {
-            "svgID": "peace0001b",
-            "svgDescription": "woman with hearts underneath the word peace",
-            "svgShape": "round",
-            "colors": [
-                {
-                    "id": "hair-color",
-                    "label": "Hair Color",
-                    "hexCode": "#000000"
-                },
-                {
-                    "id": "skin-color",
+                    "id": "skin",
                     "label": "Skin Color",
                     "hexCode": "#824836"
                 }
