@@ -4,27 +4,33 @@ import ColorPickerList from './ColorPickerList';
 import "../styles/Artboard.scss";
 import data from "../data.json";
 
-const Artboard = (props) => {
-
-    let colorArray = [];
+const Artboard = () => {
 
     // read colors from json data file
     const colors = data.image[0].colors;
 
-    // take the colors from the json data and push to an array
-    colors.forEach((item,index)=>{
-        colorArray.push(`${item.hexCode}`)
-        }) 
-
     // create variable to pass down to child element to control the swatch color
-    const [newColor, setNewColor] = useState(colorArray);
+    const [newColor, setNewColor] = useState(
+        colors.map((item, i) => {
+            return item.hexCode
+        }
+        ))
 
     //update swatch color when a change event is detected
     const updateColor = (id, index) => { 
         const selectedColor = document.getElementById(id).value;
-        let newColorArray = colorArray;
-        newColorArray[index]=selectedColor;
-        setNewColor({newColorArray});  
+
+        const newColorArray = newColor.map((color,i) => {
+            if (i === index) {
+              // replace color with newly selected color
+              return selectedColor;
+            } else {
+              // No change
+              return color
+            }
+          });
+
+        setNewColor(newColorArray);
     }
 
     return (
