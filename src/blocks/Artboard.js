@@ -3,6 +3,7 @@ import Svg from './Svg';
 import ColorPickerList from './ColorPickerList';
 import "../styles/Artboard.scss";
 import data from "../data.json";
+import DownloadButton from './DownloadButton';
 
 const Artboard = () => {
 
@@ -37,6 +38,7 @@ const Artboard = () => {
         <div>  
             <Svg svgID={data.image[0].svgID} newColor={newColor}/>
             <ColorPickerList newColor={newColor} onChange={updateColor} colors={colors}/>
+            <DownloadButton />
         </div>
     )
 }
