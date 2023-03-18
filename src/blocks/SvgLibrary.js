@@ -1,6 +1,6 @@
 import React from "react";
 import Peace0001 from '../svgs/peace0001.js';
-import {ReactComponent as Peace0001b} from '../svgs/peace0001b.svg';
+import Peace0001b from '../svgs/peace0001b.js';
 
 export default function SvgLibrary(props) {
     switch(props.id){
@@ -12,9 +12,3 @@ export default function SvgLibrary(props) {
             return <Peace0001 newColor={props.newColor}/>
     }
 }
-
-// Set default props
-SvgLibrary.defaultProps = {
-    hairColor: "#000000",
-    skinColor: "#824836"
-  };

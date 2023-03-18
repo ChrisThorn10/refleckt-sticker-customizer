@@ -8,7 +8,7 @@ const DownloadButton = (props) => {
 
     function downloadSVGAsPNG(e){
         const canvas = document.createElement("canvas");
-        const svg = document.querySelector('svg');
+        const svg = document.querySelector('#canvas svg');
         const base64doc = btoa(unescape(encodeURIComponent(svg.outerHTML)));
         const w = parseInt(svg.getAttribute('width'));
         const h = parseInt(svg.getAttribute('height'));

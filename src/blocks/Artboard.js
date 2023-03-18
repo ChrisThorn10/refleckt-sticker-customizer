@@ -4,11 +4,15 @@ import ColorPickerList from './ColorPickerList';
 import "../styles/Artboard.scss";
 import data from "../data.json";
 import DownloadButton from './DownloadButton';
+import SvgCarousel from './SvgCarousel';
 
 const Artboard = () => {
-
+    
+    // index of active svg
+    const [activeSvg, setActiveSvg] = useState(0)
+    
     // read colors from json data file
-    const colors = data.image[0].colors;
+    const colors = data.image[activeSvg].colors;
 
     // create variable to pass down to child element to control the swatch color
     const [newColor, setNewColor] = useState(
@@ -34,11 +38,19 @@ const Artboard = () => {
         setNewColor(newColorArray);
     }
 
+    // change the active svg depending on which icon is selected
+    const selectSvg = (id) => {
+        setActiveSvg(id);
+    }
+
     return (
         <div>  
-            <Svg svgID={data.image[0].svgID} newColor={newColor}/>
-            <ColorPickerList newColor={newColor} onChange={updateColor} colors={colors}/>
-            <DownloadButton />
+            <SvgCarousel data={data} onClick={selectSvg} />
+            <div id="canvas">
+                <Svg svgID={data.image[activeSvg].svgID} newColor={newColor}/>
+                <ColorPickerList newColor={newColor} onChange={updateColor} colors={colors}/>
+                <DownloadButton />
+            </div>   
         </div>
     )
 }
