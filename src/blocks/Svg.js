@@ -1,13 +1,13 @@
 import React from "react"
 import "../styles/Svg.scss";
-import SvgLibrary from "./SvgLibrary";
+import SvgLoader from "./SvgLoader";
 
 
 export default function Svg(props) {
       
     return (
         <React.Fragment>
-            <SvgLibrary id={props.svgID} newColor={props.newColor} />
+            <SvgLoader id={props.svgID} newColor={props.newColor} />
         </React.Fragment>
     )
 }

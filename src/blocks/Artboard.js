@@ -4,15 +4,16 @@ import ColorPickerList from './ColorPickerList';
 import "../styles/Artboard.scss";
 import data from "../data.json";
 import DownloadButton from './DownloadButton';
-import SvgCarousel from './SvgCarousel';
+import SvgLibrary from './SvgLibrary';
 
 const Artboard = () => {
     
-    // index of active svg
+    // index of active/selecte svg
+    // automatically set to show first one
     const [activeSvg, setActiveSvg] = useState(0)
     
     // read colors from json data file
-    const colors = data.image[activeSvg].colors;
+    const colors = data.images[activeSvg].colors;
 
     // create variable to pass down to child element to control the swatch color
     const [newColor, setNewColor] = useState(
@@ -21,8 +22,10 @@ const Artboard = () => {
         }
         ))
 
-    //update swatch color when a change event is detected
+    // update swatch color when a change event is detected
     const updateColor = (id, index) => { 
+
+        // retrieve selected color from color input element
         const selectedColor = document.getElementById(id).value;
 
         const newColorArray = newColor.map((color,i) => {
@@ -30,7 +33,7 @@ const Artboard = () => {
               // replace color with newly selected color
               return selectedColor;
             } else {
-              // No change
+              // no change
               return color
             }
           });
@@ -39,15 +42,22 @@ const Artboard = () => {
     }
 
     // change the active svg depending on which icon is selected
-    const selectSvg = (id) => {
-        setActiveSvg(id);
+    const selectSvg = (index) => {
+        let randHairColor = data.defaultColors.hair;
+        let randSkinColor = data.defaultColors.skin;
+
+        let numHairColors = data.defaultColors.hair.length;
+        let numSkinColors = data.defaultColors.skin.length;
+
+        setActiveSvg(index);
+        setNewColor([randHairColor[index % numHairColors],randSkinColor[index % numSkinColors]]);
     }
 
     return (
         <div>  
-            <SvgCarousel data={data} onClick={selectSvg} />
+            <SvgLibrary data={data} onClick={selectSvg} />
             <div id="canvas">
-                <Svg svgID={data.image[activeSvg].svgID} newColor={newColor}/>
+                <Svg svgID={data.images[activeSvg].svgID} newColor={newColor}/>
                 <ColorPickerList newColor={newColor} onChange={updateColor} colors={colors}/>
                 <DownloadButton />
             </div>   

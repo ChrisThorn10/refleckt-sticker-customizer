@@ -1,14 +1,28 @@
-import React from "react";
-import Peace0001 from '../svgs/peace0001.js';
-import Peace0001b from '../svgs/peace0001b.js';
+import React from "react"
+import "../styles/SvgLibrary.scss";
+import Svg from "./Svg";
+import data from "../data.json";
+
 
 export default function SvgLibrary(props) {
-    switch(props.id){
-        case "peace0001": 
-            return <Peace0001 newColor={props.newColor}/>
-        case "peace0001b": 
-            return <Peace0001b newColor={props.newColor}/>
-        default:
-            return <Peace0001 newColor={props.newColor}/>
-    }
+    let svgList = [];
+    
+    let randHairColor = data.defaultColors.hair;
+    let randSkinColor = data.defaultColors.skin;
+
+    let numHairColors = data.defaultColors.hair.length;
+    let numSkinColors = data.defaultColors.skin.length;
+
+    props.data.images.forEach((item,index)=>{
+        svgList.push( 
+            <div  key={index} className="svg-item" onClick={props.onClick.bind(this, index)}>
+                <Svg svgID={item.svgID} newColor={[randHairColor[index % numHairColors],randSkinColor[index % numSkinColors]]}/>
+            </div>
+        )
+    })
+
+    return (
+
+        <div id="library">{svgList}</div>
+    )
 }

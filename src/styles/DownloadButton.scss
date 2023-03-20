@@ -1,7 +1,7 @@
 button {
     width: 300px;
     height: 60px;
-    background-color: #de3a3a;
+    background: #de3a3a;
     border: none;
     color: #ffffff;
     font-size: 20px;
@@ -9,4 +9,23 @@ button {
     border-radius: 4px;
     font-weight: bold;
     box-shadow: 2px 2px 2px #000;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #de3a3a, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 500% 400%;
+    animation: gradient 15s ease infinite;
+    cursor: pointer;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
