@@ -1,8 +1,44 @@
-.fillBlack {
-    fill: red;
+@import 'vars.scss';
+
+body{
+    background-color: #282c34;
+    padding-bottom: 30px;
+    
+    @media (min-width: $breakpoint-tablet) {
+        padding-bottom: 0;
+    } 
 }
 
 #canvas {
+   width:100%;
+   display:block;
+   
+   @media (min-width: $breakpoint-tablet) {
     width: 60%;
     display:inline-block;
+   }  
+}
+
+#canvas svg {
+    width: 80%;
+    height: 80%;
+
+    max-width: 350px;
+    max-height: auto;
+    margin-bottom: 20px;
+
+    @media (min-width: $breakpoint-tablet) {
+        width: 80%;
+        height: 80%;
+        max-width: 400px;
+        max-height: 400px;
+    } 
+
+    @media (min-width: $breakpoint-desktop) {
+        width: auto;
+        height: auto;
+        max-width: none;
+        max-height: none;
+       } 
+
 }

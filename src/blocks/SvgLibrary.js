@@ -23,6 +23,10 @@ export default function SvgLibrary(props) {
 
     return (
 
-        <div id="library">{svgList}</div>
+        <div id="library">
+            <div id="library-scroll">
+                {svgList}
+            </div>
+        </div>
     )
 }

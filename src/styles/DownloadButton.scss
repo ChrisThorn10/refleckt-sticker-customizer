@@ -1,5 +1,8 @@
+@import 'vars.scss';
+
 button {
-    width: 300px;
+    width: 90%;
+    max-width: 400px;
     height: 60px;
     background: #de3a3a;
     border: none;
@@ -9,6 +12,13 @@ button {
     border-radius: 4px;
     font-weight: bold;
     box-shadow: 2px 2px 2px #000;
+
+    @media (min-width: $breakpoint-tablet) {
+        width: 300px;
+        max-width: 300px;
+    } 
+
+
 }
 
 button:hover {
