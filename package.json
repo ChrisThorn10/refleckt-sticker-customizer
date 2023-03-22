@@ -18,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +43,4 @@
     "gh-pages": "^5.0.0"
   },
   "homepage": "https://ChrisThorn10.github.io/refleckt-sticker-customizer"
-  
 }
