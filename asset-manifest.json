@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/refleckt-sticker-customizer/static/css/main.15ea76e2.css",
+    "main.js": "/refleckt-sticker-customizer/static/js/main.73922f07.js",
+    "static/js/787.0b7c4ad3.chunk.js": "/refleckt-sticker-customizer/static/js/787.0b7c4ad3.chunk.js",
+    "index.html": "/refleckt-sticker-customizer/index.html",
+    "main.15ea76e2.css.map": "/refleckt-sticker-customizer/static/css/main.15ea76e2.css.map",
+    "main.73922f07.js.map": "/refleckt-sticker-customizer/static/js/main.73922f07.js.map",
+    "787.0b7c4ad3.chunk.js.map": "/refleckt-sticker-customizer/static/js/787.0b7c4ad3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15ea76e2.css",
+    "static/js/main.73922f07.js"
+  ]
+}
