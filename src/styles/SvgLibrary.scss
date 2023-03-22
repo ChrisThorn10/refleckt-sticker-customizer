@@ -30,6 +30,8 @@
         display:inline-block;
         height: 530px;
         overflow: auto;
+        min-height: 100vh;
+
        } 
        
     @media (min-width: $breakpoint-desktop) {
@@ -37,6 +39,8 @@
         display:inline-block;
         height: 530px;
         overflow: auto;
+        min-height: none;
+        min-height: 530px;
     } 
 }
 
