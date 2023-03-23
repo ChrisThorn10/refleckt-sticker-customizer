@@ -16,7 +16,7 @@ export default function SvgLibrary(props) {
     props.data.images.forEach((item,index)=>{
         svgList.push( 
             <div  key={index} className="svg-item" onClick={props.onClick.bind(this, index)}>
-                <Svg svgID={item.svgID} newColor={[randHairColor[index % numHairColors],randSkinColor[index % numSkinColors]]}/>
+                <Svg svgID={item.svgID} newColor={[randHairColor[index % numHairColors],randSkinColor[index % numSkinColors]]} title={item.svgDescription}/>
             </div>
         )
     })

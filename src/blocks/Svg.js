@@ -7,7 +7,7 @@ export default function Svg(props) {
       
     return (
         <React.Fragment>
-            <SvgLoader id={props.svgID} newColor={props.newColor} />
+            <SvgLoader id={props.svgID} newColor={props.newColor} title={props.title}/>
         </React.Fragment>
     )
 }
