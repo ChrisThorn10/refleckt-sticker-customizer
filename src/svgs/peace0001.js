@@ -4,8 +4,8 @@ import React from "react";
 const Peace0001 = (props) => {
 
     return (
-        <svg width="460px" height="460px" viewBox="0 0 460 460" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" role="img" aria-label="Woman with hearts underneath the word peace.">
-                <title>{props.title}</title>
+        <svg viewBox="0 0 460 460" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+                <title>Group</title>
                 <desc>Created with Sketch.</desc>
                 <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                     <g id="meditate">
