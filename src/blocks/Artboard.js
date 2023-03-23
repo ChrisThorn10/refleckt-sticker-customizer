@@ -57,7 +57,7 @@ const Artboard = () => {
         <div>  
             <SvgLibrary data={data} onClick={selectSvg} />
             <div id="canvas">
-                <Svg svgID={data.images[activeSvg].svgID} newColor={newColor}/>
+                <Svg svgID={data.images[activeSvg].svgID} newColor={newColor} title={data.images[activeSvg].svgDescription}/>
                 <ColorPickerList newColor={newColor} onChange={updateColor} colors={colors}/>
                 <DownloadButton />
             </div>   
