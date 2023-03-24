@@ -11,12 +11,12 @@
             "colors": [
                 {
                     "id": "hair",
-                    "label": "Hair Color",
+                    "label": "Hair",
                     "hexCode": "#000000"
                 },
                 {
                     "id": "skin",
-                    "label": "Skin Color",
+                    "label": "Skin",
                     "hexCode": "#824836"
                 }
             ]
