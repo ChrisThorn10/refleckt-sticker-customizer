@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Svg from './Svg';
 import ColorPickerList from './ColorPickerList';
 import "../styles/Artboard.scss";
@@ -24,7 +24,6 @@ const Artboard = () => {
 
     // update swatch color when a change event is detected
     const updateColor = (id, index) => { 
-
         // retrieve selected color from color input element
         const selectedColor = document.getElementById(id).value;
 
@@ -37,8 +36,6 @@ const Artboard = () => {
               return color
             }
           });
-
-          alert(`add color to library!`)
 
         setNewColor(newColorArray);
     }
@@ -55,11 +52,25 @@ const Artboard = () => {
         setNewColor([randHairColor[index % numHairColors],randSkinColor[index % numSkinColors]]);
     }
 
+    useEffect(() => {
+        function handleInteraction(e) {
+            e.preventDefault()
+            document.getElementById("input_hair").click();
+          }
+
+        let svgHair = document.querySelectorAll("#canvas svg .hair");
+
+        svgHair.forEach((currentValue) => {
+            currentValue.addEventListener('touchstart', handleInteraction)
+            currentValue.addEventListener('click', handleInteraction)
+        })
+    });
+
     return (
         <div id="mainContainer">  
             <SvgLibrary data={data} onClick={selectSvg} />
             <div id="canvas">
-                <Svg svgID={data.images[activeSvg].svgID} newColor={newColor} title={data.images[activeSvg].svgDescription}/>
+                <Svg svgID={data.images[activeSvg].svgID} newColor={newColor} title={data.images[activeSvg].svgDescription} />
                 <ColorPickerList newColor={newColor} onChange={updateColor} colors={colors}/>
                 <DownloadButton />
             </div>   
