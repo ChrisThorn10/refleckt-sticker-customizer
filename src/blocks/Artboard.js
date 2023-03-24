@@ -38,8 +38,6 @@ const Artboard = () => {
             }
           });
 
-          alert(`add color to library!`)
-
         setNewColor(newColorArray);
     }
 
