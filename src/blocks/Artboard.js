@@ -56,6 +56,7 @@ const Artboard = () => {
         function handleInteraction(e) {
             e.preventDefault()
             document.getElementById("input_hair").click();
+            document.getElementById("label_input_hair").click();
           }
 
         let svgHair = document.querySelectorAll("#canvas svg .hair");
