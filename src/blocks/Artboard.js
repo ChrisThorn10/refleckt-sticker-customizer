@@ -53,18 +53,28 @@ const Artboard = () => {
     }
 
     useEffect(() => {
-        function handleInteraction(e) {
-            e.preventDefault()
-            document.getElementById("input_hair").click();
-            document.getElementById("label_input_hair").click();
-          }
-
         let svgHair = document.querySelectorAll("#canvas svg .hair");
+        let svgSkin = document.querySelectorAll("#canvas svg .skin");
 
-        svgHair.forEach((currentValue) => {
-            currentValue.addEventListener('touchstart', handleInteraction)
-            currentValue.addEventListener('click', handleInteraction)
-        })
+        addEvent(svgHair, "input_hair", "label_input_hair");
+        addEvent(svgSkin, "input_skin", "label_input_skin");
+
+        function addEvent(elem, desktopValue, mobileValue){
+            elem.forEach((currentValue) => {
+                currentValue.addEventListener('touchstart', (e) => handleDesktopInteraction(e,desktopValue))
+                currentValue.addEventListener('click', (e) => handleMobileInteraction(e, mobileValue))
+            })
+        }
+
+        function handleDesktopInteraction(e, desktop) {
+            e.preventDefault()
+            document.getElementById(desktop).click();
+        }
+
+        function handleMobileInteraction(e, mobile) {
+            e.preventDefault()
+            document.getElementById(mobile).click();
+        }
     });
 
     return (
