@@ -38,6 +38,8 @@ const Artboard = () => {
             }
           });
 
+          alert(`add color to library!`)
+
         setNewColor(newColorArray);
     }
 
@@ -54,7 +56,7 @@ const Artboard = () => {
     }
 
     return (
-        <div>  
+        <div id="mainContainer">  
             <SvgLibrary data={data} onClick={selectSvg} />
             <div id="canvas">
                 <Svg svgID={data.images[activeSvg].svgID} newColor={newColor} title={data.images[activeSvg].svgDescription}/>
