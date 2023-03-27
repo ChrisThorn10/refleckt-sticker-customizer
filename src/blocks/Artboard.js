@@ -61,8 +61,8 @@ const Artboard = () => {
 
         function addEvent(elem, desktopValue, mobileValue){
             elem.forEach((currentValue) => {
-                currentValue.addEventListener('click', (e) => handleDesktopInteraction(e, mobileValue))
-                currentValue.addEventListener('touchstart', (e) => handleMobileInteraction(e,desktopValue))
+                currentValue.addEventListener('click', (e) => handleDesktopInteraction(e, desktopValue))
+                currentValue.addEventListener('touchstart', (e) => handleMobileInteraction(e,mobileValue))
             })
         }
 
