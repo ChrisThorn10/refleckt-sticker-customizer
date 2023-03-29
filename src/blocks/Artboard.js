@@ -77,7 +77,10 @@ const Artboard = () => {
         }
     });
 
+    const year = new Date().getFullYear();
+
     return (
+        <React.Fragment>
         <div id="mainContainer">  
             <SvgLibrary data={data} onClick={selectSvg} />
             <div id="canvas">
@@ -86,6 +89,8 @@ const Artboard = () => {
                 <DownloadButton />
             </div>   
         </div>
+        <div><p id="footer">Copyright © {year}. All rights reserved. <br /> <a href="https://github.com/ChrisThorn10/refleckt-sticker-customizer" target="_blank">Check out the repo on GitHub</a></p></div>
+        </React.Fragment>
     )
 }
 

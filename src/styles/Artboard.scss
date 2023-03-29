@@ -50,3 +50,16 @@ body{
 
     
 }
+
+#footer {
+    color: #dfdfe1;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 40px;
+
+    & a {
+        color:#dfdfe1;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
