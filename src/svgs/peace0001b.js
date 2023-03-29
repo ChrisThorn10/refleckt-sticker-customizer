@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Peace0001 = (props) => {
+const Peace0001b = (props) => {
 
     return (
         <svg width="400px" height="400px" viewBox="0 0 460 460" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" role="img" aria-label={props.title}>
@@ -91,9 +91,9 @@ const Peace0001 = (props) => {
 
 
 // Set default props
-Peace0001.defaultProps = {
+Peace0001b.defaultProps = {
     hair: "#000000",
     skin: "#824836"
   };
 
-  export default Peace0001;
+  export default Peace0001b;
